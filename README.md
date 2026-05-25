@@ -1,6 +1,6 @@
 # ai-design-team
 
-> **AI design team — multi-agent system for UI/UX design and prototyping**
+> **AI design team — multi-agent system for UI/UX design, prototyping, and review**
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat)
 ![License](https://img.shields.io/badge/license-MIT-blue?style=flat)
@@ -14,14 +14,14 @@
 
 | Concept | Description |
 |---|---|
-| **Design** | Core design capability for ai-design-team workflows |
-| **Team** | Core team capability for ai-design-team workflows |
-| **Agent** | Core agent capability for ai-design-team workflows |
-| **Ui** | Core ui capability for ai-design-team workflows |
-| **Ux** | Core ux capability for ai-design-team workflows |
-| **Prototype** | Core prototype capability for ai-design-team workflows |
-| **Review** | Core review capability for ai-design-team workflows |
-| **Multi-Agent** | Core multi-agent capability for ai-design-team workflows |
+| **Design Agent** | Generates wireframes and component specs |
+| **Review Agent** | Audits designs for accessibility and consistency |
+| **Prototype Agent** | Converts specs to working HTML/CSS |
+| **Brand Agent** | Enforces brand guidelines across all outputs |
+| **Orchestrator** | Coordinates all agents in design pipeline |
+| **Figma Export** | Outputs design tokens compatible with Figma |
+| **WCAG Audit** | Checks AA/AAA accessibility compliance |
+| **Style Guide** | Auto-generates living style documentation |
 
 ---
 
@@ -46,19 +46,19 @@ claude 'what can ai-design-team do?'
 ## ☠️ STARTUPS / BUSINESSES
 
 - **Agencies**: automate design workflows for clients at scale
-- **Founders**: ship team features 10x faster with Claude
-- **Freelancers**: deliver agent work with AI-assisted precision
+- **Founders**: ship team features 10x faster
+- **Freelancers**: deliver agent work with AI precision
 
 ---
 
 ## Features
 
-- Design automation and orchestration
-- Team automation and orchestration
-- Agent automation and orchestration
-- Ui automation and orchestration
-- Ux automation and orchestration
-- Prototype automation and orchestration
+- Design automation
+- Team automation
+- Agent automation
+- Ui automation
+- Ux automation
+- Prototype automation
 
 ---
 
@@ -74,9 +74,14 @@ cd ai-design-team
 ## Usage
 
 ```bash
-# In Claude Code
-/ai-design-team
-claude 'design task here'
+# Activate skill in Claude Code
+claude --skill ai-design-team "your task here"
+
+# Quick workflow
+claude "design automation task"
+
+# Get help
+claude "what can ai-design-team do?"
 ```
 
 ---
@@ -85,11 +90,11 @@ claude 'design task here'
 
 | Variable | Description | Default |
 |---|---|---|
-| `API_KEY` | Primary API key for service access | Required |
+| `API_KEY` | Primary API key | Required |
 | `MODEL` | AI model to use | claude-3-5-sonnet |
-| `DEBUG` | Enable verbose debug output | false |
-| `MAX_TOKENS` | Max token budget per request | 8192 |
-| `TIMEOUT` | Request timeout in seconds | 30 |
+| `DEBUG` | Enable verbose debug | false |
+| `MAX_TOKENS` | Max token budget | 8192 |
+| `TIMEOUT` | Request timeout (sec) | 30 |
 | `LOG_LEVEL` | Logging verbosity | info |
 
 ---
@@ -98,40 +103,36 @@ claude 'design task here'
 
 ```
 ai-design-team/
-├── README.md           # This file
+├── README.md           # Documentation
 ├── SKILL.md            # Claude Code skill definition
-├── scripts/            # Automation and utility scripts
-├── templates/          # Output and prompt templates
-├── examples/           # Usage examples and demos
-├── tests/              # Unit and integration tests
+├── scripts/            # Automation scripts
+├── templates/          # Output templates
+├── examples/           # Usage examples
 └── docs/               # Extended documentation
-    ├── setup.md        # Setup guide
-    ├── api.md          # API reference
-    └── faq.md          # Frequently asked questions
 ```
 
 ---
 
 ## Examples
 
-### Basic Usage
+### Basic
 
 ```bash
-# Activate in Claude Code
-claude --skill ai-design-team "your task here"
+# Simple task
+claude --skill ai-design-team "design task"
 
-# With options
-claude --skill ai-design-team --verbose "detailed task"
+# Verbose
+claude --skill ai-design-team --verbose "detailed team task"
 ```
 
-### Advanced Workflow
+### Advanced Pipeline
 
 ```bash
-# Chain with other skills
+# Chain skills
 claude --skill ai-design-team "step 1" | claude --skill summarize
 
-# Batch processing
-for item in list; do
+# Batch run
+for item in $(cat list.txt); do
   claude --skill ai-design-team "process $item"
 done
 ```
@@ -142,18 +143,18 @@ done
 
 | Issue | Cause | Fix |
 |---|---|---|
-| Auth fails | Invalid/expired API key | Re-export key in shell profile |
-| Timeout error | Network latency or large payload | Increase TIMEOUT value |
-| Empty output | Prompt too vague | Add more context to request |
-| Rate limit hit | Too many requests | Add delay between calls |
-| Model error | Unsupported model version | Update MODEL variable |
+| Auth fails | Invalid API key | Re-export key in shell profile |
+| Timeout | Network or large payload | Increase TIMEOUT value |
+| Empty output | Prompt too vague | Add more context |
+| Rate limit | Too many requests | Add delay between calls |
+| Model error | Unsupported version | Update MODEL variable |
 | Import error | Missing dependency | Run pip install -r requirements.txt |
 
 ---
 
 ## Comparison
 
-| Feature | This Skill | Alternative A | Alternative B |
+| Feature | This Skill | Alt A | Alt B |
 |---|---|---|---|
 | Claude Code native | ✅ | ❌ | ✅ |
 | Auto-activation | ✅ | ✅ | ❌ |
@@ -163,23 +164,21 @@ done
 
 ---
 
-## Contributing
-
-1. Fork this repo
-2. Create feature branch: `git checkout -b feat/your-feature`
-3. Commit changes: `git commit -m 'feat: add feature'`
-4. Push: `git push origin feat/your-feature`
-5. Open PR
-
----
-
 ## Changelog
 
 | Version | Changes |
 |---|---|
-| v2.0 | Major refactor, Claude 4 support |
-| v1.5 | Added auto-activation keywords |
+| v2.0 | Claude 4 support, auto-activation |
+| v1.5 | Added keyword triggers |
 | v1.0 | Initial release |
+
+---
+
+## Contributing
+
+1. Fork → feature branch → commit → PR
+2. Follow conventional commits: `feat:`, `fix:`, `docs:`
+3. Add tests for new features
 
 ---
 
@@ -191,7 +190,7 @@ done
 
 ## 📜 License
 
-MIT — free to use, modify, and distribute.
+MIT — free to use, modify, distribute.
 
 ---
 
