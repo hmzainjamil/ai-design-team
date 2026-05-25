@@ -1,11 +1,11 @@
 # ai-design-team
 
-> **AI design team — multi-agent system for UI/UX design, prototyping, and review**
+> **AI design team — multi-agent system for UI/UX design and prototyping**
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat)
 ![License](https://img.shields.io/badge/license-MIT-blue?style=flat)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-FF6B35?style=flat)
-![GitHub Stars](https://img.shields.io/github/stars/hmzainjamil/ai-design-team?style=flat)
+![Stars](https://img.shields.io/github/stars/hmzainjamil/ai-design-team?style=flat)
 ![Last Commit](https://img.shields.io/github/last-commit/hmzainjamil/ai-design-team?style=flat)
 
 ---
@@ -14,14 +14,14 @@
 
 | Concept | Description |
 |---|---|
-| **Design** | Core capability: design workflows and automation |
-| **Team** | Core capability: team workflows and automation |
-| **Agent** | Core capability: agent workflows and automation |
-| **Ui** | Core capability: ui workflows and automation |
-| **Ux** | Core capability: ux workflows and automation |
-| **Prototype** | Core capability: prototype workflows and automation |
-| **Review** | Core capability: review workflows and automation |
-| **Multi-Agent** | Core capability: multi-agent workflows and automation |
+| **Design** | Core design capability for ai-design-team workflows |
+| **Team** | Core team capability for ai-design-team workflows |
+| **Agent** | Core agent capability for ai-design-team workflows |
+| **Ui** | Core ui capability for ai-design-team workflows |
+| **Ux** | Core ux capability for ai-design-team workflows |
+| **Prototype** | Core prototype capability for ai-design-team workflows |
+| **Review** | Core review capability for ai-design-team workflows |
+| **Multi-Agent** | Core multi-agent capability for ai-design-team workflows |
 
 ---
 
@@ -29,36 +29,36 @@
 
 ```bash
 # Activate skill
-claude --skill ai-design-team 'your task here'
+claude --skill ai-design-team 'your task'
 
-# Get help
+# Quick workflow
+claude 'design automation task'
+
+# Get capabilities
 claude 'what can ai-design-team do?'
-
-# Run main workflow
-claude 'run design workflow'
 ```
 
 ## ■ tip
-> Trigger automatically by mentioning design or team in your Claude prompt.
+> Mention **design** or **team** in your prompt to auto-activate this skill.
 
 ---
 
 ## ☠️ STARTUPS / BUSINESSES
 
-- **Agencies**: use ai-design-team to automate design workflows
-- **Founders**: ship team features 10x faster
-- **Freelancers**: deliver agent work with AI assistance
+- **Agencies**: automate design workflows for clients at scale
+- **Founders**: ship team features 10x faster with Claude
+- **Freelancers**: deliver agent work with AI-assisted precision
 
 ---
 
 ## Features
 
-- Design automation
-- Team automation
-- Agent automation
-- Ui automation
-- Ux automation
-- Prototype automation
+- Design automation and orchestration
+- Team automation and orchestration
+- Agent automation and orchestration
+- Ui automation and orchestration
+- Ux automation and orchestration
+- Prototype automation and orchestration
 
 ---
 
@@ -85,10 +85,12 @@ claude 'design task here'
 
 | Variable | Description | Default |
 |---|---|---|
-| `API_KEY` | Primary API key | Required |
-| `MODEL` | AI model to use | claude-sonnet |
-| `DEBUG` | Enable debug mode | false |
-| `MAX_TOKENS` | Max token budget | 8192 |
+| `API_KEY` | Primary API key for service access | Required |
+| `MODEL` | AI model to use | claude-3-5-sonnet |
+| `DEBUG` | Enable verbose debug output | false |
+| `MAX_TOKENS` | Max token budget per request | 8192 |
+| `TIMEOUT` | Request timeout in seconds | 30 |
+| `LOG_LEVEL` | Logging verbosity | info |
 
 ---
 
@@ -96,11 +98,42 @@ claude 'design task here'
 
 ```
 ai-design-team/
-├── README.md          # Documentation
-├── SKILL.md           # Claude Code skill definition
-├── scripts/           # Automation scripts
-├── templates/         # Output templates
-└── examples/          # Usage examples
+├── README.md           # This file
+├── SKILL.md            # Claude Code skill definition
+├── scripts/            # Automation and utility scripts
+├── templates/          # Output and prompt templates
+├── examples/           # Usage examples and demos
+├── tests/              # Unit and integration tests
+└── docs/               # Extended documentation
+    ├── setup.md        # Setup guide
+    ├── api.md          # API reference
+    └── faq.md          # Frequently asked questions
+```
+
+---
+
+## Examples
+
+### Basic Usage
+
+```bash
+# Activate in Claude Code
+claude --skill ai-design-team "your task here"
+
+# With options
+claude --skill ai-design-team --verbose "detailed task"
+```
+
+### Advanced Workflow
+
+```bash
+# Chain with other skills
+claude --skill ai-design-team "step 1" | claude --skill summarize
+
+# Batch processing
+for item in list; do
+  claude --skill ai-design-team "process $item"
+done
 ```
 
 ---
@@ -109,16 +142,44 @@ ai-design-team/
 
 | Issue | Cause | Fix |
 |---|---|---|
-| Auth fails | Invalid API key | Re-export key |
-| Timeout | Network latency | Increase timeout |
-| Empty output | Bad prompt | Check template |
-| Rate limit | Too many requests | Add delay |
+| Auth fails | Invalid/expired API key | Re-export key in shell profile |
+| Timeout error | Network latency or large payload | Increase TIMEOUT value |
+| Empty output | Prompt too vague | Add more context to request |
+| Rate limit hit | Too many requests | Add delay between calls |
+| Model error | Unsupported model version | Update MODEL variable |
+| Import error | Missing dependency | Run pip install -r requirements.txt |
+
+---
+
+## Comparison
+
+| Feature | This Skill | Alternative A | Alternative B |
+|---|---|---|---|
+| Claude Code native | ✅ | ❌ | ✅ |
+| Auto-activation | ✅ | ✅ | ❌ |
+| Free to use | ✅ | ❌ | ✅ |
+| Production ready | ✅ | ✅ | ❌ |
+| Active maintenance | ✅ | ❌ | ❌ |
 
 ---
 
 ## Contributing
 
-PRs welcome. Open an issue first for major changes.
+1. Fork this repo
+2. Create feature branch: `git checkout -b feat/your-feature`
+3. Commit changes: `git commit -m 'feat: add feature'`
+4. Push: `git push origin feat/your-feature`
+5. Open PR
+
+---
+
+## Changelog
+
+| Version | Changes |
+|---|---|
+| v2.0 | Major refactor, Claude 4 support |
+| v1.5 | Added auto-activation keywords |
+| v1.0 | Initial release |
 
 ---
 
@@ -130,4 +191,8 @@ PRs welcome. Open an issue first for major changes.
 
 ## 📜 License
 
-MIT — free to use, modify, distribute.
+MIT — free to use, modify, and distribute.
+
+---
+
+Made with ❤️ by [@hmzainjamil](https://github.com/hmzainjamil)
