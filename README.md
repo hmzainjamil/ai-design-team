@@ -1,408 +1,146 @@
-# ai-design-team
+# 🎨 AI Design Team
 
-![badge](https://img.shields.io/badge/Claude-Code-blue?style=flat) ![badge](https://img.shields.io/badge/AI-Powered-orange?style=flat) ![badge](https://img.shields.io/badge/Open-Source-green?style=flat)
+An intelligent design analysis tool powered by Google's Gemini AI that provides comprehensive feedback on UI/UX designs, generates social media content, and offers competitive analysis.
 
-> AI-powered design team automation workflow
+![AI Design Team Demo](/assets/demo-screenshot.png)
 
----
+## 🌟 Features
 
-## CONCEPTS
+- **🔍 Multi-faceted Design Analysis**
+  - Visual Design Evaluation
+  - User Experience Assessment
+  - Market Analysis
+  - Competitive Analysis
 
-| Concept | Description | Source |
-|---------|-------------|--------|
-| Core — AI-powered foundation for design workflows | Core foundation — the primary abstraction this repo builds on | [docs](#) |
-| Execution — task decomposition and design routing | Execution layer — how tasks get decomposed and routed | [docs](#) |
-| Integration — Claude Code + ai-team connectivity | Integration layer — connecting to external tools and APIs | [docs](#) |
-| Orchestration — multi-agent coordination and handoffs | Orchestration — multi-agent coordination and handoffs | [docs](#) |
-| Memory — persistent context across sessions | Memory — persistent context across sessions | [docs](#) |
-| Routing — intent-based skill activation | Routing — intent-based skill activation and deactivation | [docs](#) |
-| Output — structured artifacts and deliverables | Output — structured artifacts, reports, and deliverables | [docs](#) |
-| Observability — logging, tracing, audit trails | Observability — logging, tracing, and audit trails | [docs](#) |
+- **📊 Interactive Visualizations**
+  - Design Score Radar Charts
+  - Real-time Progress Tracking
+  - Optimized Image Preview
 
----
+- **📱 Social Media Content Generation**
+  - Twitter/X Posts with Hashtags
+  - Professional LinkedIn Content
+  - One-click Copy Feature
 
-## 🔥 Hot Commands
+- **🎯 Customizable Analysis**
+  - Multiple Focus Areas
+  - Context-aware Analysis
+  - Comparative Assessment
 
-```bash
-# Quick start
-python3 main.py --task "design task here"
+## 🚀 Getting Started
 
-# Power user shortcut
-python3 main.py --design --fast
+### Prerequisites
 
-# Batch execution
-python3 main.py --batch tasks.txt --parallel 4
+- Python 3.10 or higher
+- Google API Key from [Google AI Studio](https://aistudio.google.com/)
 
-# Status check
-python3 main.py --status
+### Installation
+
+1. Clone the repository:
 ```
-
-■ tip: Run with `--model qwen2.5:7b` for zero-cost local execution
-
----
-
-## ☠️ STARTUPS / BUSINESSES
-
-Use ai-design-team to automate ai-powered design team automation workflow. Perfect for agencies, freelancers, and AI-first teams running design workflows at scale.
-
----
-
-## Features
-
-- ✅ AI-powered design team automation workflow
-- ✅ Claude Code native integration
-- ✅ Ollama / Groq / Gemini model support
-- ✅ Batch processing with parallelism
-- ✅ Intent-based auto-activation
-- ✅ Zero-cost local execution path
-
----
-
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/hmzainjamil/ai-design-team.git
+git clone https://github.com/your-repo/ai-design-team.git
 cd ai-design-team
-
-# Install dependencies
-pip install -r requirements.txt  # or npm install
-
-# Configure environment
-cp .env.example .env
-# Edit .env with your API keys
-
-# Verify installation
-python3 main.py --verify
 ```
 
----
-
-## Quick Start
-
-```bash
-# Minimal working example
-python3 main.py --input "your task here"
-
-# With options
-python3 main.py --input "task" --model gpt-4 --output ~/Downloads/result.json
-
-# Batch mode
-python3 main.py --batch tasks.txt --parallel 4
+2. Install dependencies:
+```
+pip install -r requirements.txt
 ```
 
----
-
-## Architecture
-
+3. Run the application:
 ```
-┌─────────────────────────────────────────────────────────┐
-│                      Input Layer                         │
-│  CLI / API / Webhook / Scheduled trigger                 │
-└───────────────────────┬─────────────────────────────────┘
-                        │
-┌───────────────────────▼─────────────────────────────────┐
-│                   Orchestration Layer                    │
-│  Intent detection → Skill routing → Agent dispatch      │
-└───────────────────────┬─────────────────────────────────┘
-                        │
-┌───────────────────────▼─────────────────────────────────┐
-│                   Execution Layer                        │
-│  Parallel agents · Tool calls · External APIs           │
-└───────────────────────┬─────────────────────────────────┘
-                        │
-┌───────────────────────▼─────────────────────────────────┐
-│                    Output Layer                          │
-│  Structured results · Files · Notifications             │
-└─────────────────────────────────────────────────────────┘
+streamlit run app.py
 ```
 
----
+## 💻 Usage
 
-## Configuration
+1. **Configure API Key**
+   - Enter your Google API key in the sidebar
+   - The key is securely stored in the session
 
-| Option | Default | Description |
-|--------|---------|-------------|
-| `MODEL` | `qwen2.5:7b` | LLM model to use |
-| `PARALLEL` | `4` | Max parallel workers |
-| `TIMEOUT` | `120` | Per-task timeout (seconds) |
-| `OUTPUT_DIR` | `~/Downloads` | Default output directory |
-| `LOG_LEVEL` | `INFO` | Logging verbosity |
-| `CACHE` | `true` | Enable response caching |
-| `MAX_RETRIES` | `3` | Auto-retry on failure |
-| `API_KEY` | — | Provider API key |
+2. **Upload Designs**
+   - Support for JPG, JPEG, PNG formats
+   - Upload both your designs and competitor designs
+   - Automatic image optimization and preview
 
----
+3. **Select Analysis Options**
+   - Choose analysis types
+   - Select specific focus areas
+   - Add context about your project
 
-## Examples
+4. **Run Analysis**
+   - Click "Run Analysis" to start
+   - View real-time progress
+   - Get comprehensive results
 
-### Example 1 — Basic Usage
+## 🛠️ Technical Features
 
-```python
-from main import run
+- **Image Processing**
+  - Automatic resizing and optimization
+  - Format conversion
+  - Compression with quality preservation
 
-result = run(
-    task="Analyze this dataset",
-    model="qwen2.5:7b",
-    output="~/Downloads/analysis.json"
-)
-print(result.summary)
-```
+- **Responsive Design**
+  - Mobile-friendly interface
+  - Adaptive layouts
+  - Smooth animations
 
-### Example 2 — Batch Processing
+- **Performance Optimization**
+  - Efficient image handling
+  - Asynchronous processing
+  - Progress tracking
 
-```python
-tasks = [
-    "Summarize document A",
-    "Extract entities from B",
-    "Compare A and B",
-]
-results = run_batch(tasks, parallel=3)
-for r in results:
-    print(r.title, r.status)
-```
+## 📊 Analysis Components
 
-### Example 3 — Integration with Claude Code
+1. **Visual Design Analysis**
+   - Color harmony
+   - Typography
+   - Layout effectiveness
+   - Brand consistency
+   - Visual hierarchy
 
-```bash
-# Add to CLAUDE.md
-echo "Auto-activate: design, ai-team" >> ~/.claude/CLAUDE.md
+2. **UX Analysis**
+   - Navigation patterns
+   - User flow
+   - Accessibility
+   - Interaction design
+   - Information architecture
 
-# Or load skill directly
-/load-skill ai-design-team
-```
+3. **Market Analysis**
+   - Competitive positioning
+   - Industry trends
+   - Target audience fit
+   - Market opportunities
+   - Strategic recommendations
 
----
+## 🤝 Contributing
 
-## Comparison
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-| Feature | This Repo | Alternative A | Alternative B |
-|---------|-----------|--------------|--------------|
-| Speed | ⚡ Fast | 🐢 Slow | ⚡ Fast |
-| Cost | Free | Paid | Freemium |
-| Local | ✅ Yes | ❌ No | ✅ Yes |
-| Multi-agent | ✅ Yes | ❌ No | ❌ No |
-| Memory | ✅ Yes | ✅ Yes | ❌ No |
-| Streaming | ✅ Yes | ❌ No | ✅ Yes |
-| CLI | ✅ Yes | ✅ Yes | ❌ No |
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
----
+## 📝 License
 
-## Troubleshooting
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### Issue: Command not found
-```bash
-# Add to PATH
-export PATH="$PATH:$(pwd)/bin"
-source ~/.zshrc
-```
+## 🙏 Acknowledgments
 
-### Issue: API key not set
-```bash
-echo 'export API_KEY="your-key-here"' >> ~/.zshrc
-source ~/.zshrc
-```
+- Powered by [Google Gemini AI](https://aistudio.google.com/)
+- Built with [Streamlit](https://streamlit.io/)
+- Visualizations using [Plotly](https://plotly.com/)
+- Animations from [LottieFiles](https://lottiefiles.com/)
 
-### Issue: Model timeout
-```bash
-# Increase timeout
-export TIMEOUT=300
-# Or use faster model
-python3 main.py --model qwen2.5:7b
-```
+## 📧 Contact
 
-### Issue: Out of memory
-```bash
-# Reduce parallel workers
-python3 main.py --parallel 1
-# Or use smaller model
-python3 main.py --model llama3.2:3b
-```
+Rohit Ghumare - [@ghumare64](https://twitter.com/ghumare64)
+
+Project Link: [https://github.com/rohitg00/ai-design-team](https://github.com/rohitg00/ai-design-team)
 
 ---
 
-## API Reference
+Made with ❤️ by [Rohit Ghumare](https://github.com/rohitg00)
 
-### `run(task, model, output)`
-Execute a single task.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `task` | `str` | ✅ | Task description |
-| `model` | `str` | ❌ | LLM model (default: auto) |
-| `output` | `str` | ❌ | Output path |
-| `timeout` | `int` | ❌ | Timeout in seconds |
-
-Returns: `Result` object with `.summary`, `.data`, `.status`
-
-### `run_batch(tasks, parallel)`
-Execute multiple tasks in parallel.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `tasks` | `list[str]` | ✅ | List of task strings |
-| `parallel` | `int` | ❌ | Max concurrent (default: 4) |
-| `model` | `str` | ❌ | LLM model |
-
-Returns: `list[Result]`
-
----
-
-## Workflow Integration
-
-### n8n
-```json
-{
-  "nodes": [
-    {
-      "type": "n8n-nodes-base.executeCommand",
-      "parameters": {
-        "command": "python3 /path/to/main.py --input '{{ $json.input }}'"
-      }
-    }
-  ]
-}
-```
-
-### Make.com / Zapier
-Use HTTP Request module → POST to local webhook endpoint.
-
-### Claude Code Hook
-```json
-{
-  "hooks": {
-    "PostToolUse": [{"matcher": "design", "command": "python3 ~/repos/ai-design-team/main.py"}]
-  }
-}
-```
-
----
-
-## Performance
-
-| Metric | Value |
-|--------|-------|
-| Avg latency (local) | < 2s |
-| Avg latency (cloud) | < 5s |
-| Throughput (batch) | 50 tasks/min |
-| Memory footprint | < 512MB |
-| Cold start | < 3s |
-| Cache hit rate | ~70% |
-
----
-
-## Roadmap
-
-- [x] Core execution engine
-- [x] CLI interface
-- [x] Batch processing
-- [x] Multi-agent support
-- [ ] Web UI dashboard
-- [ ] Real-time streaming API
-- [ ] Plugin marketplace
-- [ ] Mobile companion app
-- [ ] Enterprise SSO
-
----
-
-## Contributing
-
-```bash
-# Fork and clone
-gh repo fork hmzainjamil/ai-design-team --clone
-cd ai-design-team
-
-# Create feature branch
-git checkout -b feat/your-feature
-
-# Make changes, then test
-python3 -m pytest tests/
-
-# Submit PR
-gh pr create --title "feat: your feature" --body "Description"
-```
-
----
-
-## Changelog
-
-### v2.0.0
-- Multi-agent orchestration
-- Intent-based skill routing
-- 50% faster batch processing
-
-### v1.5.0
-- Added streaming output
-- Memory persistence
-- n8n integration
-
-### v1.0.0
-- Initial release
-- Core CLI
-- Basic agent execution
-
----
-
-## License
-
-MIT — use freely, attribution appreciated.
-
----
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=hmzainjamil/ai-design-team&type=Date)](https://star-history.com/#hmzainjamil/ai-design-team&Date)
-
----
-
-*Built with Claude Code · Powered by open-source LLMs · Zero vendor lock-in*
-
----
-
-## Related Projects
-
-| Repo | Description | Stars |
-|------|-------------|-------|
-| [hmz-claude-code-best-practice](https://github.com/hmzainjamil/hmz-claude-code-best-practice) | Best practices for Claude Code | ⭐ |
-| [G0DM0D3](https://github.com/hmzainjamil/G0DM0D3) | AI agency OS | ⭐ |
-| [agent-skills](https://github.com/hmzainjamil/agent-skills) | Skill library | ⭐ |
-| [awesome-agentic-patterns](https://github.com/hmzainjamil/awesome-agentic-patterns) | Agentic design patterns | ⭐ |
-
----
-
-## Security
-
-- Never commit API keys to version control
-- Use `.env` files (added to `.gitignore`)
-- Rotate keys regularly
-- Use least-privilege API scopes
-- Audit tool permissions before granting
-
-```bash
-# Check for secrets before commit
-git diff --staged | grep -i "key\|secret\|token\|password"
-```
-
----
-
-## FAQ
-
-**Q: Does this work offline?**
-A: Yes — local models via Ollama require no internet.
-
-**Q: What models are supported?**
-A: Any Ollama model, OpenAI-compatible API, Groq, DeepSeek, Gemini.
-
-**Q: How do I add custom tools?**
-A: Drop a `.py` file in `tools/` directory — auto-discovered on startup.
-
-**Q: Can I use this in production?**
-A: Yes — add rate limiting and error handling for production workloads.
-
-**Q: Is there a cloud-hosted version?**
-A: Self-host only. No SaaS version.
-
-
----
-
-*Made by [hmzainjamil](https://github.com/hmzainjamil) — star if useful*
