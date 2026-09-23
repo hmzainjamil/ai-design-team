@@ -1,5 +1,9 @@
 # ai-design-team
 
+<!-- HMZ PORTFOLIO STANDARD -->
+> Portfolio status: active · Visibility: public · Source of truth: current repository source.
+<!-- END HMZ PORTFOLIO STANDARD -->
+
 > **A multi-agent design squad that ships brand systems while you sleep** — Python orchestrator running Strategist + Researcher + Designer + Critic in parallel — outputs a Figma-ready brand system.
 
 <p align="center">
