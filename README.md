@@ -30,6 +30,10 @@ The UI accepts an API key and image uploads. Do not share a deployment with untr
 - [Container setup](Dockerfile) and [Procfile](Procfile): deployment commands
 - [Security notes](SECURITY.md): data and network exposure
 
+## Documentation
+
+See the [documentation index](docs/README.md) for the source map and review notes.
+
 ## Status and verification
 
 No tests or deployment checks were run for this documentation change. Source and configuration describe intended behavior; they do not prove model availability, analysis quality, secure deployment, or successful end-to-end use.
